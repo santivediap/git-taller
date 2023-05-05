@@ -2,3 +2,10 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+.input {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 20px 20px;
+    text-align: center;
+}
