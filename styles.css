@@ -2,15 +2,33 @@
 --white-color: #ffffff;
 --black-color: #000000;
 --red-color: #ff0000;
---background-color: #a8d6ff;
+--background-color: #bde0fe;
+--background-color2: #a2d2ff;
 }
 
 body {
+    /* ese valor de altura hace que body ocupe
+    todo el alto de la pantalla para situar section en el medio */
+    height: 100vh;
     margin: 0;
     box-sizing: border-box;
     background-color: var(--background-color);
+    /* centra section en el medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+section {
+    background-color: var(--background-color2);
+    width: 200px;
+    height: 300px;
+    box-shadow: 10px 10px 15px rgb(150, 150, 150);
+    border-radius: 10px;
+    /* centra los input en el medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .input {
     background-color: var(--white-color);
     border: 5px solid var(--black-color);
