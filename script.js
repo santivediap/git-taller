@@ -1,9 +1,9 @@
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", function() {
-    document.body.setAttribute("background-color", "pink");
-})
+// const btn = document.querySelector("#btn");
+// btn.addEventListener("click", function() {
+//     document.body.setAttribute("background-color", "pink");
+// })
 
-document.querySelector("form").addEventListener("submit", function(event) {
+document.querySelector("#form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const userName = event.target.name.value;
