@@ -1,7 +1,3 @@
-// const btn = document.querySelector("#btn");
-// btn.addEventListener("click", function() {
-//     document.body.setAttribute("background-color", "pink");
-// })
 
 document.querySelector("#form").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -11,14 +7,8 @@ document.querySelector("#form").addEventListener("submit", function(event) {
 
     let errorsText = ""
 
-    const prohibitedLetters = ["º", "|", "!", "·", "$", "%", "&", "/", "(", ")", "=", "?", "¿", "¡", "+", "-"]
-
     if(userName == "") {
         errorsText += "Debes introducir un nombre\n";
-    }
-
-    if(userName.includes(prohibitedLetters)) {
-        errorsText += "Tu nombre no puede contener caracteres especiales\n";
     }
 
     if(userName.length < 3) {
@@ -32,4 +22,12 @@ document.querySelector("#form").addEventListener("submit", function(event) {
     if(userPassword < 5) {
         errorsText += "Debes introducir una contraseña de al menos 8 caracteres\n";
     }
+
+    const alert = document.createElement("p");
+    form.appendChild(alert);
+    alert.innerText = errorsText;
+
+    setTimeout(() => {
+        alert.remove();
+    }, 4000);
 })
